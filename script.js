@@ -41,7 +41,7 @@ const perguntas = [
             alternativas: [
                 {
                     texto: "A IA evita diagnósticos errados (como aplicar fungicida para resolver um problema de inseto), o que impede a sobrecarga da terra com substâncias químicas inúteis.",
-                    afirmacao: "A identificação humana visual e demorada muitas vezes gera erros de diagnóstico. Tratar uma praga com o produto errado gera um custo financeiro alto e um impacto ambiental grave, poluindo o solo com um elemento tóxico desnecessário."
+                    afirmacao: "A identificação humana visual e demorada muitas vezes gera erros de diagnóstico. Tratar uma praga com o produto errado gera um custo financeiro alto e um impacto ambiental grave, poluindo o solo com um elemento tóxico desnecessário.",
                 },
                 {
                     texto:    "Algoritmos inteligentes integrados ao maquinário ajudam a diminuir a lixivação e o escoamento superficial de poluentes ao cruzar dados de infestação com a umidade ideal do solo.",
