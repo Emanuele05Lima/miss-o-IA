@@ -9,45 +9,70 @@ const perguntas = [
         enunciado: "Um produtor rural percebeu que algumas plantas de sua lavoura estão apresentando manchas e folhas danificadas. Ele quer descobrir se existe uma infestação de pragas e evitar o uso excessivo de agrotóxicos. ",
         alternativas: [
             {
-                texto: "Utilizando palestras para prevenir o cyberbullying nas escolas.",
-                afirmacao: "Você é uma pessoa reflexiva e busca aprendizado e conhecimento."
+                texto: "Usar a IA para analisar fotos das plantas e identificar possíveis pragas ou doenças.",
+                afirmacao: "Porque a IA pode analisar imagens das plantas e reconhecer sinais de pragas ou doenças, ajudando o produtor a agir rapidamente.",
             },
             {
-                texto:  "Prestando atenção aos sinais de cyberbullying nas escolas.",
-                afirmacao: "Você é uma pessoa observadora, pois se preocupa com o bem estar dos seus alunos."
+                texto:  "Usar a IA para analisar dados da lavoura e indicar quais áreas precisam de maior atenção. ",
+                afirmacao: "VPorque a IA pode identificar áreas mais afetadas, permitindo um tratamento mais preciso e evitando o uso desnecessário de agrotóxicos. Isso pode diminuir a contaminação e ajudar na preservação da qualidade do solo.",
             }    
            
         ]
     },
     {
        
-            enunciado: "As fontes renováveis de energia são aquelas formas de produção de energia em que suas fontes são capazes de manter-se disponíveis durante um longo prazo, contando com recursos que se regeneram ou que se mantêm ativos permanentemente. Com base nisso, temos a energia geotérmica, que consiste em utilizar o calor manifestado em áreas próximas à superfície. Qual a sua opinião sobre esse modelo de energia renovável?",
+            enunciado: "Como o uso da Inteligência Artificial (IA) no monitoramento e identificação precoce de pragas pode atuar diretamente na despoluição e preservação do solo agrícola?",
             alternativas: [
                 {
-                    texto: "A energia geotérmica precisa ser mais explorada visto que utiliza o calor interno da terra, pois não depende do clima e é inesgotável.",
-                    afirmacao: "Você demonstra um perfil  de pesquisador e inovador que busca por meio da inovação soluções para o meio ambiente e sustentabilidade das gerações posteriores."
+                    texto: "Permitindo a aplicação localizada de defensivos biológicos ou químicos apenas nas áreas afetadas (pulverização de precisão), evitando o acúmulo desnecessário de resíduos tóxicos em todo o terreno.",
+                    afirmacao: "A IA aliada a sensores e drones permite o mapeamento exato de onde as pragas estão concentradas. Em vez de aplicar veneno em toda a plantação (aplicação em área total), o produtor realiza a pulverização cirúrgica. ",
                 },
                 {
-                    texto:  "Seria interessante explorar primeiramente fontes renováveis exotérmicas, em segundo plano utilizar a energia geotérmica apesar dos custos elevados de explorações e possibilidades de contaminação de rios. ",
-                    afirmacao: "Você é uma pessoa que dá ênfase em priorizar os recursos disponíveis, pensando no meio ambiente e sem descartar o viés econômico."
+                    texto:  "Viabilizando o uso de armadilhas inteligentes e dados preditivos que ajudam o produtor a antecipar infestações, reduzindo o volume geral de agroquímicos despejados no solo. ",
+                    afirmacao: "Ao cruzar dados meteorológicos com imagens de armadilhas automáticas, a IA prevê quando uma infestação vai começar. Isso possibilita ações preventivas mais limpas, diminuindo a dependência de defensivos.",
+",
                 }    
                
             ]
         },
         {
-            enunciado: "Hoje em dia é cada vez mais importante conhecer o seu corpo, suas qualidades, suas limitações e entender suas emoções. Saber controlá-las é o desafio das pessoas. A sua auto-estima impacta a sua qualidade de vida?",
+            enunciado: "O letramento tecnológico e o uso prático de ferramentas de IA transformam a rotina do produtor rural. Quais das seguintes afirmações explicam corretamente os benefícios ambientais e operacionais dessa tecnologia para a saúde do solo?",
 
             alternativas: [
                 {
-                    texto: "Na maior parte do tempo, com certeza impacta, pois é a partir da autoestima que temos um olhar positivo ou negativo sobre nossas ações diárias. Sempre estou em busca de mais autoconhecimento.",
-                    afirmacao: "Você tem consciência que é importante ter uma boa auto-estima e procura se aprofundar mais sobre o assunto, vendo a vida de um jeito positivo."
+                    texto: "A IA evita diagnósticos errados (como aplicar fungicida para resolver um problema de inseto), o que impede a sobrecarga da terra com substâncias químicas inúteis.",
+                    afirmacao: "A identificação humana visual e demorada muitas vezes gera erros de diagnóstico. Tratar uma praga com o produto errado gera um custo financeiro alto e um impacto ambiental grave, poluindo o solo com um elemento tóxico desnecessário."
                 },
                 {
-                    texto:    "Apenas ocasionalmente ou raramente. Às vezes minha autoestima oscila e isso pode afetar negativamente minha qualidade de vida em certas ocasiões.",
+                    texto:    "Algoritmos inteligentes integrados ao maquinário ajudam a diminuir a lixivação e o escoamento superficial de poluentes ao cruzar dados de infestação com a umidade ideal do solo.",
                
-                    afirmacao: "Você demomostra que precisa se conhecer mais e mostra uma consciência de uma crescente necessidade de cuidar mais da própria percepção e bem-estar emocional."
+                    afirmacao: "Sistemas inteligentes sabem correlacionar o manejo com as condições climáticas e a textura do solo. Aplicar o tratamento correto no momento em que o solo não sofrerá com fortes chuvas, por exemplo, evita que o defensivo infiltre incorretamente.",
                 }    
                
             ]
         },
 ]
+
+let atual = 0;
+let perguntaAtual;
+let historiaFinal = "";
+
+function mostraPergunta(){
+    if(atual >= perguntas.length){
+        mostraResultado();
+        return;
+    }
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "";
+    mostraAlternativas();
+}
+function mostraAlternativas(){
+    for(const alternativa of perguntaAtual.alternativas){
+        const botaoAlternativas = document.createElement("button");
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativa));
+        caixaAlternativas.appendChild(botaoAlternativas);
+    }
+
+}
