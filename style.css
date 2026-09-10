@@ -1,36 +1,62 @@
 :root {
-  --cor-fundo: #01080E;
-  --cor-principal: #0B0D20;
-  --cor-secundaria: #212333;
-  --cor-destaque: #2BDEFD;
-  --cor-texto: #D7F9FF;
+  --cor-fundo: #07110E;
+  --cor-principal: #0F221B;
+  --cor-secundaria: #1C3B30;
+  --cor-destaque: #3EE092;
+  --cor-texto: #E1F7EE;
+  --cor-hover: #26C47D;
 }
+
 body {
-  background-color: var(--cor-fundo);
+  background: linear-gradient(135deg, var(--cor-fundo) 0%, #030806 100%);
   color: var(--cor-texto);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  margin: 0;
 }
+
 .caixa-principal {
   background-color: var(--cor-principal);
   width: 90%;
+  max-width: 600px;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--cor-secundaria);
+  backdrop-filter: blur(5px);
 }
+
 h1 {
   color: var(--cor-destaque);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 button {
-  background-color: var(--cor-principal);
-  color: var(--cor-destaque);
-  border: none;
-  border-radius: 15px;
-  padding: 15px;
-  transition: background-color 0.3s;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: 2px solid var(--cor-destaque);
+  border-radius: 12px;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 button:hover {
   background-color: var(--cor-destaque);
-  color: var(--cor-secundaria);
+  color: var(--cor-fundo);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(62, 224, 146, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
 }
