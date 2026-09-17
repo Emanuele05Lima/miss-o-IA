@@ -32,3 +32,23 @@ function mostraAlternativas(){
     }
 
 }
+function respostaSelecionada(opcaoSelecionada) {
+    const afirmacoes = aleatório (opcaoSelecionada.afirmacao);
+    historiaFinal += afirmacoes + " ";
+    atual++
+    mostraPergunta();
+}
+
+export function aleatorio (lista){
+    const posicao = Math.floot(Math.random()* lista.length);
+    return lista[posicao];
+
+function mostraResultado(){
+    caixaPerguntas.textContent = "Olha só o que podemos afirmar sobre você...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+}
+
+
+
+mostraPergunta();
