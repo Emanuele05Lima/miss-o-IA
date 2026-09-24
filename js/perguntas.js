@@ -28,7 +28,6 @@ export const perguntas = [
                     texto:  "Viabilizando o uso de armadilhas inteligentes e dados preditivos que ajudam o produtor a antecipar infestações, reduzindo o volume geral de agroquímicos despejados no solo. ",
                     afirmacao: "Ao cruzar dados meteorológicos com imagens de armadilhas automáticas, a IA prevê quando uma infestação vai começar. Isso possibilita ações preventivas mais limpas, diminuindo a dependência de defensivos.",
                     "Ao correlacionar dados do clima com capturas de armadilhas automatizadas, a inteligência artificial antecipa o início de infestações, permitindo o controle preventivo e reduzindo o uso de agroquímicos."
-",
                 }    
                
             ]
