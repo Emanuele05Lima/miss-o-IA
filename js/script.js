@@ -33,7 +33,7 @@ function mostraAlternativas(){
 
 }
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = aleatório (opcaoSelecionada.afirmacao);
+    const afirmacoes = aleatório(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
     atual++
     mostraPergunta();
