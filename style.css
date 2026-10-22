@@ -36,6 +36,10 @@ h1 {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+h1, .caixa-perguntas, .caixa-resultado{
+    font-family: 'Chakra Petch', sans-serif;
+}
+
 button {
   background-color: var(--cor-secundaria);
   color: var(--cor-texto);
