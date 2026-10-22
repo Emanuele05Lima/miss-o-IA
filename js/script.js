@@ -39,9 +39,6 @@ function respostaSelecionada(opcaoSelecionada) {
     mostraPergunta();
 }
 
-export function aleatorio (lista){
-    const posicao = Math.floot(Math.random()* lista.length);
-    return lista[posicao];
 
 function mostraResultado(){
     caixaPerguntas.textContent = "Olha só o que podemos afirmar sobre você...";
