@@ -45,7 +45,7 @@ function mostraResultado(){
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
-}
+
 
 function jogaNovamente(){
     atual = 0;
