@@ -53,5 +53,6 @@ function jogaNovamente(){
     caixaResultado.classList.remove("mostrar");
     mostraPergunta();
 }
+<script type="module" src="script.js"></script>
 
 mostraPergunta();
